@@ -1,0 +1,18 @@
+Package: spotify.tools
+Type: Package
+Title: An R binding of Spotify Web API focused in metadata with accurate outputs
+Version: 0.1.0
+Authors@R: c( 
+    person("Agustin", "Perez-Torregrosa", email = "agustin.perez01@goumh.umh.es", role =c("cre","aut"), comment = c(ORCID = "0000-0001-5658-4795")),
+    person("Nuria", "Molla-Campello", email = "nuria.molla@goumh.umh.es", role =  "aut", comment = c(ORCID = "0000-0002-6448-7116"))
+   )
+Description: More about what it does (maybe more than one line)
+    Use four spaces when indenting paragraphs within the Description.
+License: AGPL-3
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
+Imports: purrr, httr,dplyr,magrittr
+Suggests:
+    spelling, testthat
+Language: en-GB
