@@ -2,11 +2,12 @@
 #'
 #' @description Obtain a popularity of a track ID o a vector of track IDs
 #'
-#' @name get_track_popularity
+#' @name gettrack
 #'
 #' @param trackid a character vector with Spotify IDs of tracks
-#' @param stoken Spotify Web API token. Defaults to spotifyr::get_spotify_access_token()
-#' @param simplyoutput choose if the output is a completed information or a simple data.frame with three columns (trackid,name,popularity)
+#' @param output a character vector to define the output items
+#' @param simplifyoutput choose if the output is a completed information in data.frame
+#' @param stoken Spotify Web API token. Defaults to spotify:tools::get_spotify_token()
 #'
 #' @return a data.frame
 #'
@@ -24,7 +25,7 @@
 #'
 #' @export
 #'
-get_track_popularity <- function(trackid, simplyoutput=FALSE, stoken = get_spotify_token()) {
+gettrack <- function(trackid,output=c("id","name","popularity","duration","islocal","explicit","disc_position","artist","artistid","totaltracks","availablecountries")  ,simplyoutput=FALSE, stoken = get_spotify_token()) {
 
   tracks <- unique(trackid)
   num_loops <- ceiling(length(tracks) / 50)
